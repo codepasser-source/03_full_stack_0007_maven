@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.matt.damon</groupId>
+	<artifactId>mattdamon-maven</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>mattdamon-maven</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- http://search.maven.org -->
+			<!-- 第一种方式：使用 maven-war-plugin默认打包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+
+			<!-- 第二种方式：使用 maven-antrun-plugin ant拷贝文件打包 -->
+			<!-- 注意 ant task可以自己写在一个ant.xml文件里,使用ant antfile来引用 -->
+			<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>copy-config</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<copy todir="${project.build.directory}/${project.build.finalName}">
+									<fileset dir="src/main/resources" />
+								</copy>
+								<zip
+									destfile="${project.build.directory}/${project.build.finalName}-war.zip">
+									<zipfileset
+										dir="${project.build.directory}/${project.build.finalName}"
+										includes="**\*.*" excludes="*.zip" />
+								</zip>
+								<copy
+									file="${project.build.directory}/${project.build.finalName}-war.zip"
+									tofile="${project.build.directory}/${project.build.finalName}.war" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> -->
+		</plugins>
+	</build>
+</project>
