@@ -1,0 +1,7 @@
+//清理clean
+mvn clean
+
+//打包package
+
+//安装jar
+mvn install:install-file -DgroupId=com.matt.damon.maven -DartifactId=mavenprj-logic -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar -Dfile=alisoft-aep-sip-sdk-isv-1.0.jar -DgeneratePom=true

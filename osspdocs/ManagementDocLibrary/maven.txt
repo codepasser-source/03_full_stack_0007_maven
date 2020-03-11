@@ -1,0 +1,1 @@
+ mvn clean deploy -pl taiping-framework,taiping-common

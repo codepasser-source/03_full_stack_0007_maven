@@ -1,0 +1,11 @@
+mvn install:install-file -Dfile=drools-compiler-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-compiler -Dversion=6.1.0.Final -Dpackaging=jar
+
+mvn install:install-file -Dfile=drools-core-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-core -Dversion=6.1.0.Final -Dpackaging=jar
+
+mvn install:install-file -Dfile=drools-decisiontables-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-decisiontables -Dversion=6.1.0.Final -Dpackaging=jar
+
+mvn install:install-file -Dfile=drools-jsr94-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-jsr94 -Dversion=6.1.0.Final -Dpackaging=jar
+
+mvn install:install-file -Dfile=drools-persistence-jpa-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-persistence-jpa -Dversion=6.1.0.Final -Dpackaging=jar
+
+mvn install:install-file -Dfile=drools-templates-6.1.0.Final.jar -DgroupId=org.drools -DartifactId=drools-templates -Dversion=6.1.0.Final -Dpackaging=jar
